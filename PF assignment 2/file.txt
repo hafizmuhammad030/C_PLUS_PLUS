@@ -1,0 +1,1 @@
+Maximum value in an array is:10
