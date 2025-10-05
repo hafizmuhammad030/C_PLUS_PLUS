@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Cat Artwork",
+    "artist": "Nimra",
+    "year": 2025,
+    "description": "A beautiful digital painting of a cat with expressive eyes.",
+    "price": "$50",
+    "image": "image/cat.jpeg"
+  },
+  {
+    "title": "Abstract Colors",
+    "artist": "Ali Khan",
+    "year": 2024,
+    "description": "An abstract mix of colors symbolizing emotions and energy.",
+    "price": "$70",
+    "image": "image/abstract1.jpeg"
+  },
+  {
+    "title": "Nature Landscape",
+    "artist": "Sara Ahmed",
+    "year": 2023,
+    "description": "A scenic mountain landscape artwork with trees and rivers.",
+    "price": "$100",
+    "image": "image/landscape.jpeg"
+  }
+]
