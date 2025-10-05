@@ -1,0 +1,39 @@
+#p1 {
+    color: blue;
+    font-size: 20px;
+    font-family:arial;
+     font-weight:bold;
+     font-variant: small-caps;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-align: center;
+}
+
+.para{
+    color: blueviolet;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-align: left;
+}
+.muhammad{
+    font-size: 30px;
+    color: black;
+}
+#Maida{
+    font-size: 40px;
+    color: brown;
+}
+.Warning{
+    height: 20px;
+    width: 30%;
+    color: chartreuse;
+    text-align: right;
+}
+.fatima{
+    height: 50px;
+    width : 10%;
+    color: chocolate;
+
+}
