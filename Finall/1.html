@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Table in JavaScript</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<h2>JavaScript Table Example</h2>
+
+<button onclick="createTable()">Create Table</button>
+
+<div id="tableContainer"></div>
+
+<script>
+function createTable() {
+  // Sample data array
+  const data = [
+    ["Name", "Age", "City"],
+    ["Ali", 22, "Lahore"],
+    ["Fatima", 25, "Karachi"],
+    ["Ahmed", 28, "Islamabad"]
+  ];
+
+  const container = document.getElementById("tableContainer");
+  container.innerHTML = "";  
+
+  const table = document.createElement("table");
+
+  for (let i = 0; i < data.length; i++) {
+    const row = document.createElement("tr");
+
+    for (let j = 0; j < data[i].length; j++) {
+      const cell = i === 0 ? document.createElement("th") : document.createElement("td");
+      cell.textContent = data[i][j];
+      row.appendChild(cell);
+    }
+
+    table.appendChild(row);
+  }
+
+
+  container.appendChild(table);
+}
+</script>
+
+</body>
+</html>
