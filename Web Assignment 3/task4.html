@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Form with Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+
+    .success {
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Contact Form</h2>
+  <form id="contactForm">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <div class="error" id="nameError"></div>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <div class="error" id="passwordError"></div>
+
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4"></textarea>
+    <div class="error" id="commentsError"></div>
+
+    <button type="submit">Submit</button>
+    <div class="success" id="successMessage"></div>
+  </form>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("passwordError").textContent = "";
+      document.getElementById("commentsError").textContent = "";
+      document.getElementById("successMessage").textContent = "";
+
+      const name = document.getElementById("name").value.trim();
+      const password = document.getElementById("password").value;
+      const comments = document.getElementById("comments").value.trim();
+
+      let isValid = true;
+
+      if (name.length < 3 || !/^[A-Za-z\s]+$/.test(name)) {
+        document.getElementById("nameError").textContent =
+          "Name must be at least 3 characters and contain only letters and spaces.";
+        isValid = false;
+      }
+
+      const passwordRegex =
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+      if (!passwordRegex.test(password)) {
+        document.getElementById("passwordError").textContent =
+          "Password must be at least 8 characters with uppercase, lowercase, number, and special character.";
+        isValid = false;
+      }
+
+      if (comments === "") {
+        document.getElementById("commentsError").textContent =
+          "Comments field cannot be empty.";
+        isValid = false;
+      } else if (comments.length > 200) {
+        document.getElementById("commentsError").textContent =
+          "Comments cannot exceed 200 characters.";
+        isValid = false;
+      }
+
+      if (isValid)
+       {
+        document.getElementById("successMessage").textContent =
+          "Form submitted successfully!";
+        document.getElementById("contactForm").reset(); 
+      }
+    });
+  </script>
+
+</body>
+</html>

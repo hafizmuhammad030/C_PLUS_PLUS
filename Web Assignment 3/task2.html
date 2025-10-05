@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Dynamic List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin: 5px 0;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    li:hover {
+      background-color: #d0e0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Click Any Item to Change Its Text</h2>
+
+  <ul id="itemList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+  <script>
+    const list = document.getElementById("itemList");
+    list.addEventListener("click", function(event) {
+      if (event.target.tagName === "LI") {
+        event.target.textContent = "✅ Item has been changed!";
+      }
+    });
+  </script>
+
+</body>
+</html>

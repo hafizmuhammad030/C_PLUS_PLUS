@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <style>
+        body {
+            background-color: lightgreen;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: lightblue;
+            padding: 20px;
+            border: 2px solid red;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+        }
+        th {
+            text-align: left;
+            font-size: 18px;
+            color: red;
+            padding: 20px 5px;
+        }
+        td {
+            padding: 8px;
+        }
+       
+        .buttons {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .buttons input {
+            font-weight: bold;
+            padding: 10px 25px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buttons input:hover {
+            background-color: rgb(23, 208, 23);
+            transition: all 0.3s ease-in-out;
+        }
+        .submit {
+            background-color: green;
+            color: white;
+        }
+        .clear {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form>
+        <fieldset>
+            <table border="0">
+                <legend>Personal Details</legend>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" placeholder="Enter your full name" required></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" required></td>
+                </tr>
+                <tr>
+                    <td>Email ID:</td>
+                    <td><input type="email" placeholder="abc@gmail.com" required></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" required></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact:</td>
+                    <td><input type="text" placeholder="XXXXXXXXXX" required></td>
+                </tr>
+                </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Educational Qualifications:</legend>
+            <table>
+                <tr>
+                    <td>Degree:</td>
+                    <td>
+                        <select>
+                            <option>Select Degree</option>
+                            <option>Bachelor</option>
+                            <option>Master</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Engineering:</td>
+                    <td>
+                        <select>
+                            <option>Select Engineering</option>
+                            <option>Computer Science</option>
+                            <option>Electronics</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobbies:</td>
+                    <td>
+                        <input type="checkbox"> Playing Chess
+                        <input type="checkbox"> Reading Books
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Address:</legend>
+            <table>
+                
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea rows="3"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Attach Resume:</td>
+                    <td><input type="file"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <div class="buttons">
+            <input type="submit" value="Submit" class="submit">
+            <input type="reset" value="Clear" class="clear">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

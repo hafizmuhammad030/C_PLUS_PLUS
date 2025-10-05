@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .profilecard {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 15px 20px;
+            border-radius: 8px;
+            width: fit-content;
+            background-color: #f9f9f9;
+        }
+        .toggle-button {
+            margin-left: 20px;
+            padding: 5px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .details {
+            display: none;
+            margin-top: 15px;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Welcome to My Profile</h2>
+
+    <div class="profilecard">
+        <div id="nameDiv">Myself Muhammad</div>
+        <button class="toggle-button" id="toggleBtn" onclick="toggleDetails()">Show Details</button>
+    </div>
+
+    <div id="detailsDiv" class="details">
+        <h4>About Me</h4>
+        <p>My name is Muhammad Imran. I am 19 years old. I want to become a proffesional coder  </p>
+     
+    </div>
+
+
+    <script>
+        function toggleDetails() {
+            var details = document.getElementById("detailsDiv");
+            var button = document.getElementById("toggleBtn");
+
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block"; 
+                button.textContent = "Hide Details"; 
+            } else {
+                details.style.display = "none"; 
+                button.textContent = "Show Details"; 
+            }
+        }
+    </script>
+
+</body>
+</html>

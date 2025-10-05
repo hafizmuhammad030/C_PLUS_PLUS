@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Changer</title>
+  <style>
+    #myImage {
+      width: 300px;
+      border: 4px solid #333;
+      transition: transform 0.3s ease;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Image Attribute Change on Events</h2>
+  <img 
+    id="myImage" 
+    src="WhatsApp Image 2025-06-06 at 21.36.19_eaf659aa.jpg" 
+    alt="First Image">
+  <br>
+  
+  <button id="changeBtn">Change Image</button>
+
+  <script>
+    const image = document.getElementById('myImage');
+    const button = document.getElementById('changeBtn');
+
+    button.addEventListener('click', function () {
+      image.src = "WhatsApp Image 2025-06-06 at 21.37.08_40fce2c8.jpg";
+      image.alt = "Second Image";
+    });
+
+    image.addEventListener('mouseover', function () {
+      image.style.transform = "scale(1.1)";
+    });
+
+    image.addEventListener('mouseout', function () {
+      image.style.transform = "scale(1)";
+    });
+  </script>
+
+</body>
+</html>
